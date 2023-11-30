@@ -1,4 +1,10 @@
+/*
+  View
+  Build dom based on model
+  
 
+
+*/
 
 class view{
 	

@@ -1,3 +1,10 @@
+/*
+  APP controller
+  Overall logic & code flow
+
+
+*/
+
 class controller{
 	
 	constructor()

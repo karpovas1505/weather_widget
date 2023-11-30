@@ -1,4 +1,9 @@
+/*
+  GEO API helper
+  Get location & timezone from IP
 
+
+*/
 const geoAPI = 'http://ip-api.com/json/';
 class geoHelper{
 	
@@ -16,6 +21,8 @@ class geoHelper{
 		let request = new XMLHttpRequest();
 		request.open('GET', apiUrl, true);
 		request.onload = this.parseResponse.bind(this);
+		//TODO: Better error handling
+		request.onerror = ()=>console.log('error: API fetch failed' );
 		request.send();
 	}
 	

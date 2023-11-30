@@ -1,14 +1,10 @@
 
-  
 /*
+  Weather model
+  Fetching weather via open-meteo API
 
-  var request = new XMLHttpRequest();
-  request.open('GET', geo_api_url, true);
-  request.onload = function() { alert( this.responseText );	}
-  request.send();
 
 */
-
 
 
 const weatherAPI = 'https://api.open-meteo.com/v1/forecast';
@@ -45,6 +41,10 @@ class model{
 		let request = new XMLHttpRequest();
 		request.open('GET', API_URL, true);
 		request.onload = this.parseResponse.bind(this);
+		
+		//TODO: Better error handling
+		request.onerror = ()=>console.log('error: API fetch failed' );
+		
 		request.send();
 	}
 	
