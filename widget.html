@@ -3,29 +3,25 @@
 <head>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<script type="text/javascript" src="scripts/ip_helper.js"></script>
-<script type="text/javascript" src="scripts/model.js"></script>
+<script type="text/javascript" src="scripts/icon_helper.js"></script>
+<script type="text/javascript" src="scripts/geo_helper.js"></script>
 <script type="text/javascript" src="scripts/view.js"></script>
+<script type="text/javascript" src="scripts/model.js"></script>
 <script type="text/javascript" src="scripts/controller.js"></script>
 
 <script>
-				   
 
-  
- var md = new model('48.7194','44.5018');
- const log = ()=> console.log(md);
- md.on_loaded = log;
- md.load();
- 
-
- 
-
-
- 
+  var widget_ctrl;
+  const setup = ()=>{
+   widget_ctrl = new controller(document);
+   widget_ctrl.initialize();
+  }
   
 </script>
-<div class="widget">
+
+
+<body onload="setup()">
+<div class="widget" name="widget">
 	<div class="content">
 		<div class="symbol">🌤</div>
 		<div class="caption">+12C</div>
