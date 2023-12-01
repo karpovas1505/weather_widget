@@ -1,34 +1,44 @@
+
 .widget {
   position: fixed;
   top: 50px;
   right: 50px;
-  width: 380px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 580px;
+  height: 120px;
+background: rgba(255, 255, 255, 0.04);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(14px);
+-webkit-backdrop-filter: blur(14px);
+border: 1px solid rgba(255, 255, 255, 0.12);
   justify-content: center;
   display: flex;
 }
 
 .content {
-  position: relative;
+   position: relative;
+
+   margin-left: 8px;
+   width: 80px;
+   height: 100px;
 }
 
 .symbol{
-	position:relative;
-	font-size:48px;
-	background: radial-gradient(circle farthest-corner at center center, #F6F8F9 0%, #E5EBEE 30%, #D7DEE3 60%, #F5F7F9 100%);
+	
+	font-size:64px;
+	background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+	text-align: center;
+	vertical-align: middle;
 }
 .caption{
-	font-size:12px;
-	background:#A7AEA3;
+	position: fixed;
+	font-size:16px;
+	background: #A7CFDF;
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-	text-align:center;
+	bottom: 20%;
+
 }
